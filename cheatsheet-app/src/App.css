@@ -5,3 +5,17 @@
   color: #fff;
   font-family: "Poppins";
 }
+
+
+
+.-webkit-app-region-drag {
+  -webkit-app-region: drag;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+button:hover {
+  transition: background-color 0.2s;
+}

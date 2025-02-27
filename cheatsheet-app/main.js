@@ -1,8 +1,17 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import path from 'path'
 import isDev from 'electron-is-dev'
 
 let mainWindow
+
+// IPC-Handler für Fenstersteuerung
+ipcMain.on('close-window', () => {
+  if (mainWindow) mainWindow.close()
+})
+
+ipcMain.on('minimize-window', () => {
+  if (mainWindow) mainWindow.minimize()
+})
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -12,7 +21,9 @@ function createWindow() {
     transparent: true,
     frame: false,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,       // Ermöglicht die Verwendung von Node.js im Renderer-Prozess
+      contextIsolation: true,       // Aktiviert Context Isolation für Sicherheit
+      preload: path.join(__dirname, 'preload.js') // Lädt das Preload-Script
     }
   })
 
