@@ -1,5 +1,6 @@
 import { contextBridge, ipcRenderer } from ('electron');
 
-contextBridge.exposeInMainWorld('ipcRenderer', {
-  send: (channel, data) => ipcRenderer.send(channel, data)
+contextBridge.exposeInMainWorld('electronAPI', {
+  minimizeWindow: () => ipcRenderer.send('minimize-window'),
+  closeWindow: () => ipcRenderer.send('close-window')
 })
