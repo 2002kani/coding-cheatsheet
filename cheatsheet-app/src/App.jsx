@@ -64,23 +64,23 @@ const cheatsheet = [
   { title: "Array.from()", description: "Creates a new array from an array-like or iterable object.", 
       code1: "const list = 😀😫😀😫🤪;", 
       code2: "Array.from(list);", code2Lösung: "// [😀, 😫, 😀, 😫, 🤪]" }
-]
+];
 
 export default function App() {
   return (
     <div className="app">
       <div className="drag-area">
-        <div className="window-control">
+        <div className="window-controls">
           <button className='minimize-button'> – </button>
           <button className='close-button'> × </button>
         </div>
       </div>
 
-      <h2> Array- & Stringmethods Cheatsheet </h2>
+      <h2 className='title'> Array- & Stringmethods Cheatsheet </h2>
 
       {cheatsheet.map((item, index) => (
        <div className="cheatsheet" key={index}>
-        <p> <span>{item.title}</span> {item.description}</p>
+        <p className='description'> <span>{item.title}</span> - {item.description}</p>
         <div className="code-area">
           <p> {item.code1} </p>
           <p> {item.code2Lösung ? 

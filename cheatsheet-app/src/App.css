@@ -2,9 +2,9 @@
   font-family: monospace;
 }
 
-.app-container {
+.app {
   padding: 1rem;
-  background-color: rgba(17, 24, 39, 0.9);
+  background-color: #202020;
   backdrop-filter: blur(10px);
   color: white;
   border-radius: 0.5rem;
@@ -12,7 +12,6 @@
   position: relative;
 }
 
-/* Dragbarer Bereich */
 .drag-area {
   height: 2rem;
   cursor: move;
@@ -23,14 +22,13 @@
   right: 0;
 }
 
-/* Titel */
 .title {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-/* Fenstersteuerung */
 .window-controls {
   position: absolute;
   top: 0.5rem;
@@ -52,27 +50,25 @@
   background-color: rgba(55, 65, 81, 0.5);
 }
 
-.close-button:hover {
-  background-color: rgba(239, 68, 68, 0.5);
+.cheatsheet .description{
+  font-size: 12px;
 }
 
-/* Cheatsheet-Liste */
-.cheatsheet-list {
-  margin-top: 1.5rem;
-  list-style: none;
-  padding: 0;
+.cheatsheet .description span{
+  font-weight: 600;
 }
 
-.cheatsheet-item {
-  margin-bottom: 0.5rem;
+.code-area{
+  background: #2c2c2c;
+  padding: 0.1px 10px 0.1px 10px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
-.command {
-  color: #4ade80;
-  font-family: monospace;
+.code-area p{
+  font-size: 13px;
 }
 
-.description {
-  margin-left: 0.5rem;
-  color: #d1d5db;
+.code-lösung{
+  color: #9e9e9e;
 }
