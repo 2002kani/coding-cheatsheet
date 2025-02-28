@@ -19,15 +19,15 @@ ipcMain.on('minimize-window', () => {
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 600,
-    height: 400,
+    width: 460,
+    height: 700,
     alwaysOnTop: true,
     transparent: true,
     frame: false,
     webPreferences: {
-      nodeIntegration: true,       // Ermöglicht die Verwendung von Node.js im Renderer-Prozess
-      contextIsolation: true,       // Aktiviert Context Isolation für Sicherheit
-      preload: path.join(__dirname, 'preload.js') // Lädt das Preload-Script
+      nodeIntegration: true,       
+      contextIsolation: true,       
+      preload: path.join(__dirname, 'preload.js')
     }
   })
 

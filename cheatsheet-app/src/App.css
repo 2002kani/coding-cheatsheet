@@ -4,7 +4,8 @@
 
 .app {
   padding: 1rem;
-  background-color: #202020;
+  background-color: #202020f2;
+  /*background-color: #202020;*/
   backdrop-filter: blur(10px);
   color: white;
   border-radius: 0.5rem;
