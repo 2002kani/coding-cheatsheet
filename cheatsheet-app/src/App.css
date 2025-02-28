@@ -1,3 +1,7 @@
+*{
+  font-family: monospace;
+}
+
 .app-container {
   padding: 1rem;
   background-color: rgba(17, 24, 39, 0.9);

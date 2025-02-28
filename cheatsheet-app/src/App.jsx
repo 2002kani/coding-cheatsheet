@@ -8,7 +8,7 @@ import './App.css'
 */
 
 const cheatsheet = [
-  { code: "const list = [😫, 😫, 😫, 😫] --> list.map((⚪️) => 😀); // [😀, 😀, 😀, 😀]", description: "xyzxyzxyzxyxz" },
+  { description: "Map - Returns new array, calling a provided function on every element in the array.", code: "const list = [😫, 😫, 😫, 😫] list.map((⚪️) => 😀); // [😀, 😀, 😀, 😀]" },
   {  },
   {  },
   {  },
@@ -26,7 +26,13 @@ const cheatsheet = [
 export default function App() {
   return (
     <div className="app">
-      <h1>hi</h1>
+      <h1> Array- / Stringmethods Cheatsheet </h1>
+      {cheatsheet.map((item) => (
+       <>
+         <p>{item.description}</p>
+         <p>{item.code}</p>
+       </>
+      ))}
     </div>
   )
 }
