@@ -1,8 +1,8 @@
-Simple javascript Array Cheatsheet
+**Simple javascript Array Cheatsheet**
 
-How to use:
+**How to use:**
 
-Open Terminal
-enter "cheat"
-press enter
-enjoy!
+1. Open Terminal
+2. enter "cheat"
+3. press enter
+4. enjoy!
