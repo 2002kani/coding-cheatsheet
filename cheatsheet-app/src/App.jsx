@@ -82,12 +82,22 @@ export default function App() {
        <div className="cheatsheet" key={index}>
         <p className='description'> <span>{item.title}</span> - {item.description}</p>
         <div className="code-area">
-          <p> {item.code1} </p>
-          { item.code2Lösung ? 
-          (<p>{item.code2} <span className='code-lösung'>{item.code2Lösung}</span></p>)
-            : { item.code3Lösung ?
-            (<p>{item.code3} <span className='code-lösung'>{item.code3Lösung}</span></p>) : (<p>{item.code3}</p>)} : (<p>{item.code2}</p>)}
-         </div>
+          <p>{item.code1}</p>
+
+          {item.code2Lösung ? (
+            <p>
+              {item.code2} <span className="code-lösung">{item.code2Lösung}</span>
+            </p>
+          ) : (
+            <p>{item.code2}</p>
+          )}
+
+          {item.code3 && (
+            <p>
+              {item.code3} {item.code3Lösung && <span className="code-lösung">{item.code3Lösung}</span>}
+            </p>
+          )}
+        </div>
        </div>
       ))}
     </div>
