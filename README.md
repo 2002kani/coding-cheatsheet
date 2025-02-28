@@ -6,3 +6,5 @@
 2. enter "cheat"
 3. press enter
 4. enjoy!
+
+(Made with React, Javascript & Electron)
